@@ -1,210 +1,34 @@
-# Headline
+# 浪屿星辰
 
-> An awesome project. $h=\frac{5}{32^2}$
-
-$$E=mc^6$$
-
-$$x=uofjei$$
-
-[必须柚子啊](test.md)
-[ha](ni.md)
-
-# FAQ Section
-
-- ofpeopfe +
+记录我的日常想法
 
 
-jfoiejoife
+## 戒瘾
 
-###### j +
-fefe
-
+有时过于想要成功，甚至会忘记了人生还有其他的可能性，我们是想把目标简化，但是却陷入了一种怪圈中，执着不一定能带来回报，甚至可能会达到相反的效果。有很多东西，我们越是执着，越是得不到它
 
 
-fe
-few
-fwef
-wefwe
-f
-wef
-we
+### 风险规避
 
-###### fejifeji
+1月13日
 
-<li> fefe + </li>
+这次走了很长的trail，走到一半因为怕太阳下山于是原路返回了。这就像是我的人生，我特别害怕走到前面走错了，为了稳妥反而选了一条最让人放心的路
 
-#### fefe
+### 反学习
 
-Introduction text for the FAQ page.
-
-- • An intersection formula for Lubin--Tate spaces (With [ansn](qirui.li)) +
-
-  Answer 1 [dfde](qirui.li)</br> fejijfei ia
-
-  fefeji
-
----- published at: Duck
-
-
-+ An tjerijei +
-
- feji
-Available on Arxiv
-
-
-- Anintersection number formuls ofjeio
-+ Author:Qirui LiAbstract:click for details +
-
- We have do what to do
-
-+ Question 2? +
-
-  Answer 2
-
-+ Question +
-
- hahahah
-
-
-+ Question +
-
-yayaya
-$$
-\gdef\oo{\mathcal O_F}
-$$
-
-
-$$
-\oo\oo\oo
-$$
-
-$f
-$
-
-$$
-3^σ
-$$
-
-$$
-\begin{CD}
-A@>>>B\\
-\end{CD}
-$$
-
-$$\eqalign{
-(a-b)^2 &= (a-b)(a-b) \\
-        &= a^2 - ab - ba + b^2 \\
-        &= a^2 - 2ab + b^2
-}$$
-
-$$
-{x \over y}
-$$
-
-$$
-\frac xy
-$$
-
-$$
-x \over { y\over z}+1
-$$
-
-$$
-\pmatrix{1&2\\4&4}
-$$
-
-$$
-∑_{n=1}
-$$
-
-$$
-\sum_{n=1}
-$$
-``` mermaid
-gantt
-    dateFormat DD-MM-YYY
-    axisFormat %m/%y
-
-    title Example
-    section example section
-    activity :active, 01-02-2019, 03-08-2019
-```
-
-
-``` sequence-diagrams
-Andrew->China: Says
-Note right of China: China thinks\nabout it
-China-->Andrew: How are you?
-Andrew->>China: I am good thanks!
-```
-
-``` plantuml
-Bob -> Alice : hello
-```
-
-@startuml
-Bob -> Alice : hello
-@enduml
+[Learn to Unlearn](Jan/0114.md)
+人往往把一些学过的东西潜移默化成为了一种习惯，紧接着就仅仅是习惯了这个习惯，反学习的第一步是意识到自己一种潜在习惯的存在。例如在判断事物时，采用灵活的判断方式而非按照自己的既定印象去做。  用二元论的方式来思考这个世界。 任何东西都是价值观与事实结合的产物，没有价值观无法做判断。  反学习的第一步，是看到那些被自己假设了的东西，这些东西藏在我们行为模式很深的地方。
 
 
 
-```mermaid
-graph LR
-    A --- B
-    B-->C[fa:fa-ban forbidden]
-    B-->D(fa:fa-spinner);
-```
 
 
-``` flowchart
-st=>start: Start|past:>http://www.google.com[blank]
-e=>end: End|future:>http://www.google.com
-op1=>operation: My Operation|past
-op2=>operation: Stuff|current
-sub1=>subroutine: My Subroutine|invalid
-cond=>condition: Yes
-or No?|approved:>http://www.google.com
-c2=>condition: Good idea|rejected
-io=>inputoutput: catch something...|future
-
-st->op1(right)->cond
-cond(yes, right)->c2
-cond(no)->sub1(left)->op1
-c2(yes)->io->e
-c2(no)->op2->e
-```
 
 
-``` chart
-{
-  "type": "pie",
-  "data": {
-    "labels": [
-      "Red",
-      "Blue",
-      "Yellow"
-    ],
-    "datasets": [
-      {
-        "data": [
-          300,
-          50,
-          100
-        ],
-        "backgroundColor": [
-          "#FF6384",
-          "#36A2EB",
-          "#FFCE56"
-        ],
-        "hoverBackgroundColor": [
-          "#FF6384",
-          "#36A2EB",
-          "#FFCE56"
-        ]
-      }
-    ]
-  },
-  "options": {}
-}
-```
+
+
+### Some templates
+
+Here I put some examples in this fild, a template
+[TestFiles](template.md)
 
