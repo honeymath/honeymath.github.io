@@ -1,4 +1,6 @@
 [Back](README.md)
+## 一些小测试页面
+[TestTemplate](test/README.md)
 ## 杂物栏啊
 
 一些未完成的文字随便记录与此，之后再收集分类。
