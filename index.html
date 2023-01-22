@@ -23,6 +23,11 @@
   <div id="app"></div>
   <script>
     window.$docsify = {
+      Valine: {
+              appId: 'ITtQMYvVq55Zssd398MYXSrB-gzGzoHsz',
+              appKey: 'rIeA5dgO7vxu0CTzQA5AoEsY',
+              // docPath: 'hash', //default to `hash` ,or you can choose `full`
+          },
       name: '',
       repo: '',
       relativePath: true,
@@ -69,8 +74,12 @@
 <script src="//cdn.jsdelivr.net/npm/docsify-katex@latest/dist/docsify-katex.js"></script>
 -->
 
-<!--Commento https://github.com/ndom91/docsify-commento-->
-<script src="commento.js"></script>
+<!--Valine https://github.com/daidi/docsify-valine/-->
+<!--I banned it because comments can be very dangerous-->
+<!--script src='//unpkg.com/valine/dist/Valine.min.js'></script-->
+<!--script src="//unpkg.com/docsify-valine/dist/docsify-valine.min.js"></script-->
+<!--Commento https://github.com/ndom91/docsify-commento--><!--This is very hard to use and do not have multipage comments system.-->
+<!--script src="commento.js"></script-->
 <!-- Flexible alerts https://github.com/fzankl/docsify-plugin-flexible-alerts -->
 <script src="https://unpkg.com/docsify-plugin-flexible-alerts"></script>
 <!-- Mathjax LaTeX engine -->
