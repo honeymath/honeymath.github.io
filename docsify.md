@@ -123,12 +123,66 @@ git push
 打开MacVim之前，你要确保你熟悉Vim 的一些基本操作,请在网上找教程学习。
 
 在Vim上面的菜单中，可以找到 Edit > StartupSettings，点击后你会打开根目录下的 `.vimrc`文件。在这里可以添加很多系统设置。比如我特别喜欢把VIM设置成半透明的样子，并且设置成大字体。只需要将下面代码加入 `.vimrc`文件中即可
-```
+```vimrc
 colorscheme torte
 set transparency=40
 set guifont=Courier_new:h18
 ```
 
-接下来，在我们写博客的时候，和在我们看博客的时候，区别在于看博客的时候可以随时点击超级链接跳转，但写博客的时候不行。新建一个文件夹和文档都是很累人的事情。因此我们想在写博客的时候也能随时跳转，岂不是很爽？我们用以下的VIM配置来实现编辑器内的链接跳转
+接下来，在我们写博客的时候，和在我们看博客的时候，区别在于看博客的时候可以随时点击超级链接跳转，但写博客的时候不行。新建一个文件夹和文档都是很累人的事情。因此我们想在写博客的时候也能随时跳转，岂不是很爽？我们用以下的VIM配置来实现编辑器内的链接跳转。
 
-```作者很懒，还没有开始写这一部分```
+先写一个vim脚本 `enter.vim`
+
+```vim
+let line=getline('.')
+let linead = '0'.line
+
+let flag = 0 " A flag to indicate if enter successfully
+
+if flag == 0
+	try
+		let filename=split(split(linead,"](")[1],")")[0]
+		let filetitle=split(split(linead,"](")[0],"0[")[0]
+		let flag = 1 "a flag indicating successfully find the file to enter
+	catch
+	endtry
+endif
+if flag == 1
+	let backfilename = repeat('../',len(split(filename,'/'))-1).expand('%p') "this step remembers what the original name
+	let temp="e ".expand('%:p:h')."/".filename "expand('%:p:h') represents current folder
+	call insert(counter,expand('%:p'),0) "remember the folder address of the current file name
+	call insert(position,line('.'),0) "remembering the cursor position of the current file
+	execute temp
+	execute "silent !mkdir -p %:h"
+elseif line('.')==1 && getline('.')==""
+	call append(1,"[返回](".backfilename.")")
+	call setline(1,"# ".filetitle)
+else
+	echo "Not able to enter!"
+endif
+```
+这个Vim 脚本的功能是能在光标所在行搜索 markdown格式的链接，然后进入这个链接，同时如果文件夹或文件不存在时还能自动创建文件夹或文件，直接省去了新建文件或新建文件夹的烦恼。同时如果光标在一个空文件首行的时候调用此脚本，还可以创建标题，这个脚本会智能的利用我们进入的信息来制作我们的标题。
+
+我们除了进入命令，我们再来写一个返回上一级的命令`escape.vim`
+
+```vim
+if(len(counter)>0)
+	let a=expand('%:t')
+	execute "e ".counter[0]
+	call remove(counter,0)
+	execute position[0]
+	call remove(position,0)
+	call search(a)
+endif
+```
+为了配置好这两个脚本，可以把这两个脚本储存到一个固定的文件夹中，比如我存放的地址是`~/Dropbox/Latex/escape.vim`和`~/Dropbox/Latex/enter`，然后在`.vimrc` 中加入如下命令
+```vimrc
+:let counter=[]
+:let position=[]
+:map « :source ~/Dropbox/Latex/escape.vim<CR>
+:map \ :source ~/Dropbox/Latex/enter.vim<CR>
+```
+这里，符号`«`代表的是 `option + \`. 在使用的时候，你只需要写好一个markdown格式的链接`[title](file.md)`, 然后按一下 `\`就能直接跳转进入这个文件，再按一下`\` 就能自动给这个文件加上title这个名字。并且会自动生成返回链接。
+
+有了这些脚本，并结合这两个按键，你就可以在vim里自由的编辑markdown文件树了。 
+
