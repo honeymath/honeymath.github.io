@@ -1422,3 +1422,23 @@ https://www.mathjobs.org/jobs/list/21761
 
 https://www.mathjobs.org/jobs/list/21629
 
+### 0127 University of North Carolina at Chapel Hill, Mathematics 
+
+https://www.mathjobs.org/jobs/list/21929
+
+https://math.unc.edu/people/faculty/
+
+
+> Note: Only applied at Jan 31
+ 
+- [x] Coverletter created
+- [x] submitted 
+- [x] emailed
+
+Name|Email|Website
+-|-|-
+Cherednik, Ivan|chered@email.unc.edu|
+Varchenko, Alexander| anv@email.unc.edu
+
+
+
